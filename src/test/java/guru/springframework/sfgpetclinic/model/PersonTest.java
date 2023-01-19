@@ -1,10 +1,11 @@
 package guru.springframework.sfgpetclinic.model;
 
-import org.junit.jupiter.api.Test;
+import guru.springframework.sfgpetclinic.ModelTests;
+import org.junit.jupiter.api.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class PersonTest {
+class PersonTest implements ModelTests {
 
     @Test
     void groupedAssertions() {
@@ -24,8 +25,8 @@ class PersonTest {
 
         //then
         assertAll("Tests Props Set",
-                () -> assertEquals("Joe", person.getFirstName(), "first name failed"),
-                () -> assertEquals("SAR", person.getLastName(), "Last name failed"));
+                () -> assertEquals("Jo", person.getFirstName(), "first name failed"),
+                () -> assertEquals("SARR", person.getLastName(), "Last name failed"));
         //All assertions are tested, even if the first fails
     }
 }

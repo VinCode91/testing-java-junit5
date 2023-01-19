@@ -17,7 +17,6 @@ class OwnerSDJpaServiceTest {
         service = new OwnerSDJpaService(null, null, null);
     }
 
-    @Disabled
     @Test
     void findByLastName() {
         Owner foundOwner = service.findByLastName("SARR");
